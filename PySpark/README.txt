@@ -1,4 +1,4 @@
-Set up iPython for PySpark as per our documentation. 
+Set up iPython for PySpark following our documentation http://documentation.altiscale.com/using-spark-with-ipython. 
 
 Once the iPython is set up for PySpark, do the following
 
