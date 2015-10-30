@@ -23,3 +23,5 @@ cd ~/notebooks  # If you have pre-existing notebooks, put them here.
 Now that iPython is up and running, open localhost:8888 (port as specified in ~/.ipython/profile_pyspark/ipython_notebook_config.py during set up).
 
 Open your notebooks or make new notebooks.
+
+The notebook PySpark_iPython_py26.ipynb makes use of a dataset about bay area bike share's trips from http://www.bayareabikeshare.com/open-data during the period from September 2014 to August 2015. The dataset is in csv. Please use csvtojson.py to convert the csv file to json file before you upload the dataset to an HDFS location.
