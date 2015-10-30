@@ -9,6 +9,7 @@ export PYSPARK_DRIVER_PYTHON_OPTS=notebook
 export PYSPARK_PYTHON=python
 export PYTHONPATH=/opt/spark/python/lib/py4j-0.8.2.1-src.zip:/opt/spark/python/:PYSPARK_DRIVER_PYTHON=ipython
 
+export SPARK_HOME=/opt/spark
 cd $SPARK_HOME
 spark_event_log_dir=$(grep 'spark.eventLog.dir' /etc/spark/spark-defaults.conf | tr -s ' ' '\t' | cut -f2)
 hadoop_snappy_jar=$(find $HADOOP_HOME/share/hadoop/common/lib/ -type f -name "snappy-java-*.jar")
@@ -23,3 +24,5 @@ cd ~/notebooks  # If you have pre-existing notebooks, put them here.
 Now that iPython is up and running, open localhost:8888 (port as specified in ~/.ipython/profile_pyspark/ipython_notebook_config.py during set up).
 
 Open your notebooks or make new notebooks.
+
+The notebook PySpark_iPython_py26.ipynb makes use of a dataset about bay area bike share's trips from http://www.bayareabikeshare.com/open-data during the period from September 2014 to August 2015. The dataset is in csv. Please use csvtojson.py to convert the csv file to json file before you upload the dataset to an HDFS location.  
